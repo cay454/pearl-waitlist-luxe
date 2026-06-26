@@ -129,7 +129,7 @@ function Landing() {
             <div className="absolute -inset-6 bg-[color:var(--gold)]/10 blur-3xl" aria-hidden />
             <img
               src={rollOnAsset.url}
-              alt="Close-up of Pearl's cooling ceramic roll-on dome on a brushed brass vessel"
+              alt="Macro view of a Pearl roll-on liquid makeup applicator — a shimmering rose-pink ceramic dome set into a hand-finished brushed brass vessel, lit by warm directional light against a soft shadowed backdrop"
               className="relative h-full w-full object-cover shadow-[0_30px_80px_-20px_rgb(0_0_0/0.6)]"
             />
           </div>
