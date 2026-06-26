@@ -124,29 +124,38 @@ function Landing() {
 
       {/* Advantage */}
       <section id="advantage" className="border-t border-[color:var(--gold)]/10">
-        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
-          <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 py-24 md:grid-cols-[1fr_1.1fr] md:py-32">
+          <div className="relative">
+            <div className="absolute -inset-6 bg-[color:var(--gold)]/10 blur-3xl" aria-hidden />
+            <img
+              src={rollOnAsset.url}
+              alt="Close-up of Pearl's cooling ceramic roll-on dome on a brushed brass vessel"
+              className="relative h-full w-full object-cover shadow-[0_30px_80px_-20px_rgb(0_0_0/0.6)]"
+            />
+          </div>
+
+          <div>
             <p className="text-[11px] uppercase tracking-luxe text-gold">The Pearl Advantage</p>
             <h2 className="mt-6 font-display text-4xl md:text-5xl">
               Every detail, considered.
             </h2>
-            <div className="mx-auto mt-8 h-px w-16 bg-[color:var(--gold)]/60" />
-          </div>
+            <div className="mt-8 h-px w-16 bg-[color:var(--gold)]/60" />
 
-          <div className="mt-16 grid gap-12 md:grid-cols-2 md:gap-x-20 md:gap-y-16">
-            {advantages.map((a, i) => (
-              <div key={a.title} className="flex gap-6">
-                <span className="font-display text-2xl text-gold/70">
-                  0{i + 1}
-                </span>
-                <div>
-                  <h3 className="font-display text-2xl">{a.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {a.body}
-                  </p>
+            <div className="mt-12 grid gap-10">
+              {advantages.map((a, i) => (
+                <div key={a.title} className="flex gap-6">
+                  <span className="font-display text-2xl text-gold/70">
+                    0{i + 1}
+                  </span>
+                  <div>
+                    <h3 className="font-display text-2xl">{a.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {a.body}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
