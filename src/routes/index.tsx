@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAsset from "@/assets/pearl-hero.png.asset.json";
 import collectionAsset from "@/assets/pearl-collection.png.asset.json";
 import rollOnAsset from "@/assets/pearl-rollon.png.asset.json";
@@ -245,9 +245,17 @@ function Landing() {
       <footer className="border-t border-[color:var(--gold)]/15">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 md:flex-row">
           <p className="font-display text-lg tracking-luxe text-gold">PEARL</p>
-          <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
-            © {new Date().getFullYear()} Pearl. All rights reserved.
-          </p>
+          <div className="flex items-center gap-6">
+            <Link
+              to="/auth"
+              className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors"
+            >
+              Login
+            </Link>
+            <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
+              © {new Date().getFullYear()} Pearl. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </main>
