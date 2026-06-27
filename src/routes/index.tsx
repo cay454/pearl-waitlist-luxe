@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAsset from "@/assets/pearl-hero.png.asset.json";
 import collectionAsset from "@/assets/pearl-collection.png.asset.json";
 import rollOnAsset from "@/assets/pearl-rollon.png.asset.json";
