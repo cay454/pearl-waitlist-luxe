@@ -67,12 +67,20 @@ function Landing() {
             <a href="#advantage" className="hover:text-gold transition">The Advantage</a>
             <a href="#story" className="hover:text-gold transition">The House</a>
           </div>
-          <a
-            href="#waitlist"
-            className="border border-[color:var(--gold)]/60 px-4 py-2 text-[10px] uppercase tracking-luxe text-gold transition hover:bg-[color:var(--gold)] hover:text-[color:var(--primary-foreground)]"
-          >
-            Join Waitlist
-          </a>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/auth"
+              className="text-[10px] uppercase tracking-luxe text-muted-foreground transition hover:text-gold"
+            >
+              Login
+            </Link>
+            <a
+              href="#waitlist"
+              className="border border-[color:var(--gold)]/60 px-4 py-2 text-[10px] uppercase tracking-luxe text-gold transition hover:bg-[color:var(--gold)] hover:text-[color:var(--primary-foreground)]"
+            >
+              Join Waitlist
+            </a>
+          </div>
         </nav>
       </header>
 
