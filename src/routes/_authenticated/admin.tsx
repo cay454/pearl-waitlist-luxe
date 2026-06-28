@@ -104,12 +104,20 @@ function AdminPage() {
             <Link to="/" className="text-xl font-serif tracking-[0.3em] text-primary">PEARL</Link>
             <span className="text-sm text-muted-foreground">Admin</span>
           </div>
-          <button
-            onClick={handleSignOut}
-            className="text-sm text-muted-foreground hover:text-foreground"
-          >
-            Sign out
-          </button>
+          <div className="flex items-center gap-4">
+            <Link
+              to="/"
+              className="text-sm text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
+            >
+              ← Back to site
+            </Link>
+            <button
+              onClick={handleSignOut}
+              className="text-sm text-muted-foreground hover:text-foreground"
+            >
+              Sign out
+            </button>
+          </div>
         </div>
       </header>
 
