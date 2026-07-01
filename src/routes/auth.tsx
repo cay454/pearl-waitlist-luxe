@@ -9,7 +9,6 @@ export const Route = createFileRoute("/auth")({
 
 function AuthPage() {
   const navigate = useNavigate();
-  const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -26,17 +25,8 @@ function AuthPage() {
     setLoading(true);
     setError(null);
     try {
-      if (mode === "signup") {
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: { emailRedirectTo: window.location.origin + "/admin" },
-        });
-        if (error) throw error;
-      } else {
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
-      }
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) throw error;
       navigate({ to: "/admin" });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong");
@@ -52,9 +42,7 @@ function AuthPage() {
           PEARL
         </Link>
         <div className="bg-card border border-border rounded-lg p-8 shadow-lg">
-          <h1 className="text-2xl font-serif text-foreground mb-1">
-            {mode === "signin" ? "Sign in" : "Create account"}
-          </h1>
+          <h1 className="text-2xl font-serif text-foreground mb-1">Sign in</h1>
           <p className="text-sm text-muted-foreground mb-6">Admin access only</p>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
@@ -84,16 +72,9 @@ function AuthPage() {
               disabled={loading}
               className="w-full px-4 py-2 bg-primary text-primary-foreground rounded-md font-medium disabled:opacity-50"
             >
-              {loading ? "..." : mode === "signin" ? "Sign in" : "Create account"}
+              {loading ? "..." : "Sign in"}
             </button>
           </form>
-          <button
-            type="button"
-            onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
-            className="mt-4 text-sm text-muted-foreground hover:text-foreground w-full text-center"
-          >
-            {mode === "signin" ? "Need an account? Sign up" : "Already have an account? Sign in"}
-          </button>
         </div>
       </div>
     </div>
