@@ -175,6 +175,7 @@ function AdminPage() {
                 <tr className="text-left text-xs uppercase tracking-wider text-muted-foreground border-b border-border">
                   <th className="px-4 py-3">Email</th>
                   <th className="px-4 py-3">Name</th>
+                  <th className="px-4 py-3">Feedback</th>
                   <th className="px-4 py-3">Joined</th>
                 </tr>
               </thead>
@@ -183,6 +184,7 @@ function AdminPage() {
                   <tr key={entry.id} className="border-b border-border/50 last:border-0 hover:bg-accent/30">
                     <td className="px-4 py-3 text-foreground">{entry.email}</td>
                     <td className="px-4 py-3 text-muted-foreground">{entry.name ?? "—"}</td>
+                    <td className="px-4 py-3 text-muted-foreground max-w-xs truncate" title={entry.feedback ?? ""}>{entry.feedback ?? "—"}</td>
                     <td className="px-4 py-3 text-muted-foreground">
                       {new Date(entry.created_at).toLocaleString()}
                     </td>
