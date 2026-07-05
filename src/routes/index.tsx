@@ -248,9 +248,10 @@ function Landing() {
           <div className="flex items-center gap-6">
             <Link
               to="/auth"
-              className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors"
+              className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors inline-flex items-baseline gap-1"
             >
               Login
+              <span className="text-[8px] tracking-[0.2em] text-muted-foreground/60 normal-case">Patented</span>
             </Link>
             <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
               © {new Date().getFullYear()} Pearl. All rights reserved.
