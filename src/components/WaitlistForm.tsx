@@ -12,6 +12,7 @@ export function WaitlistForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
   const [entryId, setEntryId] = useState<string | null>(null);
+  const [entryToken, setEntryToken] = useState<string | null>(null);
   const [feedback, setFeedback] = useState("");
   const [feedbackState, setFeedbackState] = useState<"idle" | "loading" | "sent">("idle");
 
@@ -22,6 +23,7 @@ export function WaitlistForm() {
     try {
       const res = await join({ data: { email, name: name || undefined } });
       setEntryId(res.id);
+      setEntryToken(res.token);
       setStatus(res.alreadyOnList ? "already" : "success");
     } catch (err) {
       setStatus("error");
@@ -31,10 +33,10 @@ export function WaitlistForm() {
 
   async function onFeedback(e: React.FormEvent) {
     e.preventDefault();
-    if (!entryId || !feedback.trim()) return;
+    if (!entryId || !entryToken || !feedback.trim()) return;
     setFeedbackState("loading");
     try {
-      await sendFeedback({ data: { id: entryId, feedback: feedback.trim() } });
+      await sendFeedback({ data: { id: entryId, token: entryToken, feedback: feedback.trim() } });
       setFeedbackState("sent");
     } catch {
       setFeedbackState("idle");
