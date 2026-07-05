@@ -86,7 +86,8 @@ function AdminPage() {
 
   function exportCsv() {
     const rows = [["Email", "Name", "Feedback", "Joined"], ...filtered.map((e) => [e.email, e.name ?? "", e.feedback ?? "", e.created_at])];
-    const csv = rows.map((r) => r.map((v) => `"${String(v).replace(/"/g, '""')}"`).join(",")).join("\n");
+    const sanitize = (v: string) => (/^[=+\-@\t\r]/.test(v) ? `'${v}` : v);
+    const csv = rows.map((r) => r.map((v) => `"${sanitize(String(v)).replace(/"/g, '""')}"`).join(",")).join("\n");
     const blob = new Blob([csv], { type: "text/csv" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
