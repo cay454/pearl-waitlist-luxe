@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Pearl — The First Roll-On Liquid Makeup" },
+      { name: "description", content: "Pearl is luxury, reinvented. The first-ever roll-on liquid blush, highlight, contour and glow. Join the waitlist for the inaugural drop." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Pearl — The First Roll-On Liquid Makeup" },
+      { property: "og:description", content: "Pearl is luxury, reinvented. The first-ever roll-on liquid blush, highlight, contour and glow. Join the waitlist for the inaugural drop." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Pearl — The First Roll-On Liquid Makeup" },
+      { name: "twitter:description", content: "Pearl is luxury, reinvented. The first-ever roll-on liquid blush, highlight, contour and glow. Join the waitlist for the inaugural drop." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/745b0d24-a8cd-4fb0-b765-42d4a6a878fd/id-preview-d0a8af40--186da615-87ab-4902-ba19-0f038998ff7e.lovable.app-1783292461729.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/745b0d24-a8cd-4fb0-b765-42d4a6a878fd/id-preview-d0a8af40--186da615-87ab-4902-ba19-0f038998ff7e.lovable.app-1783292461729.png" },
     ],
     links: [
       {
