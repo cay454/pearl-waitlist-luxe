@@ -14,7 +14,7 @@ export const listWaitlist = createServerFn({ method: "GET" })
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
     const { data, error } = await supabaseAdmin
       .from("waitlist")
-      .select("id, email, name, created_at")
+      .select("id, email, name, feedback, created_at")
       .order("created_at", { ascending: false });
 
     if (error) throw new Error(error.message);
