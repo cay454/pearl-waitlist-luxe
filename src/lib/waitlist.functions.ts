@@ -18,7 +18,8 @@ export const joinWaitlist = createServerFn({ method: "POST" })
       if (error.code === "23505") {
         return { ok: true, alreadyOnList: true as const };
       }
-      throw new Error(error.message);
+      console.error("[waitlist] insert error", error);
+      throw new Error("Unable to join the waitlist. Please try again.");
     }
     return { ok: true, alreadyOnList: false as const };
   });
