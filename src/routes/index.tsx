@@ -243,19 +243,40 @@ function Landing() {
       </section>
 
       <footer className="border-t border-[color:var(--gold)]/15">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-10 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 py-10 md:flex-row">
           <p className="font-display text-lg tracking-luxe text-gold">PEARL</p>
-          <div className="flex items-center gap-6">
-            <Link
-              to="/auth"
-              className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors inline-flex items-baseline gap-1"
-            >
-              Login
-              <span className="text-[8px] tracking-[0.2em] text-muted-foreground/60 normal-case">Patented</span>
-            </Link>
-            <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
-              © {new Date().getFullYear()} Pearl. All rights reserved.
-            </p>
+          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-8">
+            <div className="flex items-center gap-6">
+              <a
+                href="https://instagram.com/PearlMakeupCollection"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://tiktok.com/@pearlmakeupcollection"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors"
+              >
+                TikTok
+              </a>
+            </div>
+            <div className="hidden h-4 w-px bg-[color:var(--gold)]/20 md:block" />
+            <div className="flex items-center gap-6">
+              <Link
+                to="/auth"
+                className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors inline-flex items-baseline gap-1"
+              >
+                Login
+                <span className="text-[8px] tracking-[0.2em] text-muted-foreground/60 normal-case">Patented</span>
+              </Link>
+              <p className="text-[10px] uppercase tracking-luxe text-muted-foreground">
+                © {new Date().getFullYear()} Pearl. All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </footer>
