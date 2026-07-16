@@ -254,7 +254,7 @@ function Landing() {
                 className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors"
               >
                 Instagram
-              </div>
+              </a>
               <a
                 href="https://tiktok.com/@pearlmakeupcollection"
                 target="_blank"
