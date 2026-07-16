@@ -248,10 +248,10 @@ function Landing() {
           <div className="flex flex-col items-center gap-4 md:flex-row md:gap-8">
             <div className="flex items-center gap-6">
               <a
-                href="https://instagram.com/pearlmakeupcollection"
+                href="https://www.instagram.com/pearlmakeupcollection"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors"
+                className="text-[10px] uppercase tracking-luxe text-accent hover:text-gold transition-colors"
               >
                 Instagram
               </a>
