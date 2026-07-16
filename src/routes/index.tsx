@@ -251,10 +251,10 @@ function Landing() {
                 href="https://www.instagram.com/pearlmakeupcollection"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[10px] uppercase tracking-luxe text-accent hover:text-gold transition-colors"
+                className="text-[10px] uppercase tracking-luxe text-muted-foreground hover:text-gold transition-colors"
               >
                 Instagram
-              </a>
+              </div>
               <a
                 href="https://tiktok.com/@pearlmakeupcollection"
                 target="_blank"
