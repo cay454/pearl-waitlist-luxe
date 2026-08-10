@@ -66,6 +66,7 @@ function Landing() {
           <div className="hidden gap-10 text-[11px] uppercase tracking-luxe text-muted-foreground md:flex">
             <a href="#collection" className="hover:text-gold transition">The Collection</a>
             <a href="#advantage" className="hover:text-gold transition">The Advantage</a>
+            <Link to="/mechanism" className="hover:text-gold transition">The Mechanism</Link>
             <a href="#story" className="hover:text-gold transition">The House</a>
           </div>
           <a
