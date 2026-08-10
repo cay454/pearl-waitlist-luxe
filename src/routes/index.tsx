@@ -223,6 +223,54 @@ function Landing() {
         </div>
       </section>
 
+      {/* The Rollerball Control */}
+      <section id="control" className="border-t border-[color:var(--gold)]/10 bg-radiance">
+        <div className="mx-auto max-w-3xl px-6 py-24 text-center md:py-32">
+          <p className="text-[11px] uppercase tracking-luxe text-gold">The Mechanism</p>
+          <h2 className="mt-6 font-display text-4xl leading-tight md:text-5xl">
+            Control, <span className="italic">rolled on.</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            The rollerball deposits liquid formula exactly where you want it, in controlled, buildable layers for smoother, more even application.
+          </p>
+
+          <div className="mt-12 text-left">
+            <p className="mb-6 text-center text-sm font-medium uppercase tracking-luxe text-gold">
+              It works across the entire range:
+            </p>
+            <ul className="divide-y divide-[color:var(--gold)]/15 border-y border-[color:var(--gold)]/15">
+              <li className="py-5">
+                <span className="font-display text-xl text-foreground">Blush</span>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  Control the intensity of pigment.
+                </p>
+              </li>
+              <li className="py-5">
+                <span className="font-display text-xl text-foreground">Bronzer</span>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  Control the placement and distribution.
+                </p>
+              </li>
+              <li className="py-5">
+                <span className="font-display text-xl text-foreground">Highlighter</span>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  Control exactly where luminosity sits.
+                </p>
+              </li>
+              <li className="py-5">
+                <span className="font-display text-xl text-foreground">Foundation</span>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                  Control how much coverage you build.
+                </p>
+              </li>
+            </ul>
+            <p className="mt-8 font-display text-xl italic text-gold">
+              The rollerball itself becomes the control mechanism.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Story */}
       <section id="story" className="border-t border-[color:var(--gold)]/10">
         <div className="mx-auto max-w-3xl px-6 py-24 text-center md:py-32">
