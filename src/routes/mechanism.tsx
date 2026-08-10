@@ -16,10 +16,12 @@ export const Route = createFileRoute("/mechanism")({
         content:
           "The rollerball becomes the control mechanism. Smoother, more even application across blush, bronzer, highlighter and foundation.",
       },
+      { property: "og:url", content: "https://pearlmakeup.org/mechanism" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "canonical", href: "https://pearlmakeup.org/mechanism" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap",
