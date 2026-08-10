@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroAsset from "@/assets/pearl-hero.png.asset.json";
 import collectionAsset from "@/assets/pearl-collection.png.asset.json";
 import rollOnAsset from "@/assets/pearl-rollon.png.asset.json";
+import modelLookAsset from "@/assets/pearl-model-look.png.asset.json";
 import { WaitlistForm } from "@/components/WaitlistForm";
 
 export const Route = createFileRoute("/")({
@@ -194,6 +195,30 @@ function Landing() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* The Pearl Look */}
+      <section id="look" className="border-t border-[color:var(--gold)]/10">
+        <div className="mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="mb-10 text-center">
+            <p className="text-[11px] uppercase tracking-luxe text-gold">The Pearl Look</p>
+            <h2 className="mt-6 font-display text-4xl md:text-5xl">
+              One ritual. <span className="italic">Three gestures.</span>
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Bronzer to warm. Blush to bloom. Highlight to illuminate. The complete Pearl face in three effortless rolls.
+            </p>
+          </div>
+
+          <div className="relative overflow-hidden">
+            <div className="absolute -inset-4 bg-[color:var(--gold)]/10 blur-3xl" aria-hidden />
+            <img
+              src={modelLookAsset.url}
+              alt="Model wearing Pearl roll-on liquid bronzer, blush and highlight for a sun-kissed, luminous glow"
+              className="relative w-full object-cover shadow-[0_30px_80px_-20px_rgb(0_0_0/0.6)]"
+            />
           </div>
         </div>
       </section>
