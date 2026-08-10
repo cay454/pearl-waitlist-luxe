@@ -20,11 +20,13 @@ export const Route = createFileRoute("/")({
         content:
           "Luxury makeup, reinvented. The first-ever roll-on liquid collection. Reserve your place.",
       },
+      { property: "og:url", content: "https://pearlmakeup.org/" },
       { property: "og:image", content: heroAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: heroAsset.url },
     ],
     links: [
+      { rel: "canonical", href: "https://pearlmakeup.org/" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap",
