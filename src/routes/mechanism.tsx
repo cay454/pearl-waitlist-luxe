@@ -72,7 +72,8 @@ function MechanismPage() {
             <Link to="/" className="hover:text-gold transition">The House</Link>
           </div>
           <Link
-            to="/#waitlist"
+            to="/"
+            hash="waitlist"
             className="border border-[color:var(--gold)]/60 px-4 py-2 text-[10px] uppercase tracking-luxe text-gold transition hover:bg-[color:var(--gold)] hover:text-[color:var(--primary-foreground)]"
           >
             Join Waitlist
